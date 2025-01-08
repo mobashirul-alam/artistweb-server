@@ -13,7 +13,7 @@ async function createFeedback(req, res) {
 
 async function getFeedback(req, res) {
     try {
-        const feedback = await FeedbackModel.find({});
+        const feedback = await FeedbackModel.find({}).sort({ createdAt: -1 });
         if (feedback) {
             res.status(200).json(feedback);
         } else {

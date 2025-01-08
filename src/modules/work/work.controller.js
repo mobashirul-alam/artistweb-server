@@ -13,7 +13,7 @@ async function createWork(req, res) {
 
 async function getWork(req, res) {
     try {
-        const work = await WorkModel.find({});
+        const work = await WorkModel.find({}).sort({ createdAt: -1 });
         if (work) {
             res.status(200).json(work);
         } else {
