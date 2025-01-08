@@ -5,7 +5,7 @@ const workSchema = new Schema(
         title: { type: String, required: true },
         tags: { type: [String], required: true },
         image: { type: String, required: true },
-        isLatest: { type: Boolean, required: true },
+        isLatest: { type: Boolean, default: false },
     },
     { timestamps: true }
 );
