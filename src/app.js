@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(
     cors({
         origin: [
-            "https://artistweb-tau.vercel.app/",
+            "https://artistweb-tau.vercel.app",
             "http://localhost:3000",
             "http://localhost:3001",
         ],
